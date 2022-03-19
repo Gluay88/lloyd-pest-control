@@ -1,4 +1,4 @@
-![Lloyd Pest Control](https://cdn.lloydpest.com/wp-content/uploads/2017/06/lpc_logo.png)
+![Lloyd Pest Control](./app/assets/images/lloydheader.jpg)
 
 ## Lloyd_Pest_Control
 ##### By: Gluay S. Wang
@@ -33,3 +33,14 @@
     <%= yield %>
 </body>
 ```
+### Add Bootstrap
+Gemfile
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+
+bundle install (in Terminal)
+rename stylesheet css
+yarn add bootstrap
+mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+
+

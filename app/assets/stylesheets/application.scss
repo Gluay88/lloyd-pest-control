@@ -1,0 +1,28 @@
+.nav-container {
+    width: 100%;
+    margin: 0 auto;
+}
+h1 {
+    color:rgb(47, 47, 47);
+}
+.nav {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    border-bottom:rgb(47, 47, 47) solid 1px;
+}
+.nav-item {
+    margin-right:2.5%;
+}
+.nav-item a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #005e9b;
+}
+.nav-item a:hover {
+    color: #067fcf;
+}
