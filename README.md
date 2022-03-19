@@ -1,3 +1,5 @@
+![Lloyd Pest Control](https://cdn.lloydpest.com/wp-content/uploads/2017/06/lpc_logo.png)
+
 ## Lloyd_Pest_Control
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
