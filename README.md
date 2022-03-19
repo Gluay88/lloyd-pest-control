@@ -1,5 +1,5 @@
-``Lloyd_Pest_Control
-``` set up the project
+## Lloyd_Pest_Control
+### set up the project
 - rails new lloyd_pest_control -d postgresql -T
 - cd lloyd_pest_control folder
 - rails db:create
