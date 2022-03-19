@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Technicians", welcome_technicians_path %>
+    <%= link_to "Locations", welcome_locations_path %>
+    <%= link_to "Work Orders", welcome_orders_path %>
+    <%= link_to "Invoices", invoices_path %>
+    <%= link_to "Login", root_path %>
     <%= yield %>
   </body>
 </html>
