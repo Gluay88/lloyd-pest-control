@@ -1,3 +1,24 @@
+.home-page {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10%;
+}
+.home-page img {
+    padding-bottom: 5%;
+    width: 30%;
+}
+.home-page h1 {
+    font-size: 5.5rem;
+    color: #005e9b;
+}
+.home-page h3 {
+    font-size: 2.5rem;
+    padding-bottom: 7%;
+}
+.home-page p {
+    color: #005e9b;
+}
 .nav-container {
     width: 100%;
     margin: 0 auto;
@@ -28,8 +49,14 @@ h1 {
 }
 .upload-container {
     text-align: center;
-    padding-top: 5%;
+    padding: 5% 0 15% 0;
 }
 .upload-container h4 {
     margin-bottom: 2%;
 }
+.table a, .add-btn a {
+    text-decoration: none;
+    color: #005e9b;
+}
+
+
