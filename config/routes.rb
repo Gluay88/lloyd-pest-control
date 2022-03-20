@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :technicians do 
+    collection { post :import }
+  end
   get 'welcome/index'
   get 'welcome/technicians'
   get 'welcome/locations'
