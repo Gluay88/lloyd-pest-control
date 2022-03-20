@@ -47,8 +47,10 @@ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scs
 - rails g scaffold Technician name:string --no-stylesheets
 - rails db:migrate
 
+### Please don't do this..
 rails g migration add_id_to_technician id:interger
 rails db:migrate
+### How to fix it..
 rails destroy migration add_id_to_technician
 
 ### CSV Upload
