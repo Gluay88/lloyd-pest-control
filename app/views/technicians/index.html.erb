@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Technicians</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @technicians.each do |technician| %>
+      <tr>
+        <td><%= technician.name %></td>
+        <td><%= link_to 'Show', technician %></td>
+        <td><%= link_to 'Edit', edit_technician_path(technician) %></td>
+        <td><%= link_to 'Destroy', technician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h3>Import Technicians</h3>
+<%= form_tag import_technicians_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload File" %>
+<% end %>
+
+<%= link_to 'New Technician', new_technician_path %>
