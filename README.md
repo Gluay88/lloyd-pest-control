@@ -54,10 +54,10 @@ rails db:migrate
 rails destroy migration add_id_to_technician
 
 ### CSV Upload
-app/controllers/technicians_controller.rb
+app/views/technicians/index.html.erb
 add
 ``` ruby
-<h3>Import Technicians</h3>
+<h4>Import Technicians</h4>
 <%= form_tag import_technicians_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Upload File" %>
@@ -94,4 +94,21 @@ config/application.rb
 add
 ```ruby 
     require "csv"
+```
+### Create Location Model
+- rails g scaffold Location name:string city:string --no-stylesheets
+- rails db:migrate
+- Repeat the process from Technical Model
+
+app/models/location.rb
+add
+``` ruby 
+def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row| 
+        self.find_or_create_by(id: row["id"]) do |location|
+        location.name = row["name"]
+        location.city = row["name"]
+        end  
+    end
+end
 ```

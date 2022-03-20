@@ -24,7 +24,7 @@
 <%= link_to 'New Technician', new_technician_path %>
 
 <br>
-<div class="technician-container">
+<div class="upload-container">
   <h4>Import Technicians</h4>
   <%= form_tag import_technicians_path, multipart: true do %>
     <%= file_field_tag :file %>
