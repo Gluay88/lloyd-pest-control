@@ -112,4 +112,38 @@ def self.import(file)
     end
 end
 ```
+
+## Drop database 
+- rails db:reset
+
 ### Create WorkOrder Model
+- rails g scaffold WorkOrder technician:references location:references time:datetime duration:integer price:decimal
+- rails db:migrate
+
+app/models/work_order.rb
+add
+``` ruby
+def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row| 
+        self.find_or_create_by(id: row["id"]) do |workorder|
+        workorder.technician_id = row["technician_id"]
+        workorder.location_id = row["location_id"]
+        workorder.time = row["time"]
+        workorder.duration = row["duration"]
+        workorder.price = row["price"]
+        end  
+    end
+end
+```
+app/models/technician.rb
+add 
+``` ruby
+has_many :workorders
+has_many :locations, through: :workorders
+```
+app/models/location.rb
+add
+``` ruby
+has_many :workorders
+has_many :technicians, :through => :workorders
+```

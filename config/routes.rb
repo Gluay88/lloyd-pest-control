@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :work_orders do
+    collection { post :import }
+  end
   resources :locations do 
     collection { post :import }
   end

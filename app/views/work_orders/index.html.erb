@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Orders</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Technician</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_orders.each do |work_order| %>
+      <tr>
+        <td><%= work_order.technician_id %></td>
+        <td><%= work_order.location_id %></td>
+        <td><%= work_order.time %></td>
+        <td><%= work_order.duration %></td>
+        <td><%= work_order.price %></td>
+        <td><%= link_to 'Show', work_order %></td>
+        <td><%= link_to 'Edit', edit_work_order_path(work_order) %></td>
+        <td><%= link_to 'Destroy', work_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="add-btn">
+  <%= link_to 'New Work Order', new_work_order_path %>
+</div>
+<br>
+
+<div class="upload-container">
+  <h4>Import Work_Orders</h4>
+  <%= form_tag import_work_orders_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Upload File" %>
+  <% end %>
+</div>
+
+
