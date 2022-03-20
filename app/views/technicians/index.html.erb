@@ -21,11 +21,13 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to 'New Technician', new_technician_path %>
+<div class="add-btn">
+<%= link_to 'Add New Technician', new_technician_path %>
+</div
 
 <br>
 <div class="upload-container">
-  <h4>Import Technicians</h4>
+  <h4>Import Technicians (csv)</h4>
   <%= form_tag import_technicians_path, multipart: true do %>
     <%= file_field_tag :file %>
     <%= submit_tag "Upload File" %>
