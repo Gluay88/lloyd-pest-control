@@ -5,6 +5,10 @@
 
 ### Please run bin/webpack-dev-server after rails s
 
+### Problems faced
+
+### Possible future improvements
+
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
 - cd lloyd_pest_control folder
