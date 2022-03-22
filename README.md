@@ -5,6 +5,20 @@
 
 ### Please run bin/webpack-dev-server after rails s
 
+### Deploy Heroku
+(I've run these commands twice)
+- bundle lock --add-platform x86_64-linux
+- bundle lock --add-platform ruby
+- git status
+- git add .
+- git commit -m "add ruby and linux to Gemfile"
+- git push origin main
+
+- rails db:system:change --to=postgresql
+- bundle
+
+
+
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
 - cd lloyd_pest_control folder
@@ -186,3 +200,5 @@ add
   </button>
 </div>
 ```
+
+### Work Order Database
