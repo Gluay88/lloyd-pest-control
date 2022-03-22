@@ -4,6 +4,11 @@ class WorkOrdersController < ApplicationController
   # GET /work_orders or /work_orders.json
   def index
     @work_orders = WorkOrder.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @work_orders.to_csv }
+    end
   end
 
   # GET /work_orders/1 or /work_orders/1.json

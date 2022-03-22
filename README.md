@@ -2,6 +2,9 @@
 
 ## Lloyd_Pest_Control
 ##### By: Gluay S. Wang
+
+### Please run bin/webpack-dev-server after rails s
+
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
 - cd lloyd_pest_control folder
@@ -146,4 +149,40 @@ add
 ``` ruby
 has_many :workorders
 has_many :technicians, :through => :workorders
+```
+- Romoved Log in link (I don't need it yet for this project)
+
+### Download CSV from database
+app/controllers/work_orders_controller.rb
+add
+
+``` ruby
+respond_to do |format|
+    format.html
+    format.csv { send_data @work_orders.to_csv }
+end
+```
+app/models/work_order.rb
+add
+``` ruby
+def self.to_csv
+    attributes = %w{id technician_id location_id time duration price}
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |workorder| 
+        csv << workorder.attributes.values_at(*attributes)
+      end
+    end
+end
+```
+app/views/work_orders/index.html.erb
+add
+
+``` ruby
+<div class="download-container">
+  <h4>Download Work_Orders</h4>
+  <button>
+    <%= link_to "Download File", work_orders_path(format: "csv") %>
+  </button>
+</div>
 ```

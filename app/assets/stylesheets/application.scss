@@ -49,10 +49,21 @@ h1 {
 }
 .upload-container {
     text-align: center;
-    padding: 5% 0 15% 0;
+    padding: 5% 0 0 0;
 }
 .upload-container h4 {
     margin-bottom: 2%;
+}
+.download-container {
+    text-align: center;
+    padding: 5% 0 15% 0;
+}
+.download-container button {
+   border: 1px solid gray;
+}
+.download-container button a {
+    color: black;
+    text-decoration: none;
 }
 .table a, .add-btn a {
     text-decoration: none;
@@ -60,3 +71,35 @@ h1 {
 }
 
 
+.timer {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 30px;
+    
+  }
+  
+  .timer__part {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .timer__btn {
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: #8208e6;
+    cursor: pointer;
+  }
+  
+  .timer__btn--start {
+    background: #00b84c;
+  }
+  
+  .timer__btn--stop {
+    background: #ff0256;
+  }
+  
