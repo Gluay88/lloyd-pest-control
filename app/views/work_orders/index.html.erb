@@ -41,3 +41,10 @@
     <%= submit_tag "Upload File" %>
   <% end %>
 </div>
+
+<div class="download-container">
+  <h4>Download Work_Orders</h4>
+  <button>
+    <%= link_to "Download File", work_orders_path(format: "csv") %>
+  </button>
+</div>

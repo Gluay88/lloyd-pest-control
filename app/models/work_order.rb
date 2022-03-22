@@ -12,4 +12,14 @@ class WorkOrder < ApplicationRecord
         end  
     end
   end
+
+  def self.to_csv
+    attributes = %w{id technician_id location_id time duration price}
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |workorder| 
+        csv << workorder.attributes.values_at(*attributes)
+      end
+    end
+  end
 end
