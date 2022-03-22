@@ -6,6 +6,8 @@
 ### Please run bin/webpack-dev-server after rails s
 
 ### Deploy Heroku
+https://lloyd-pest-control.herokuapp.com/
+
 (I've run these commands twice)
 - bundle lock --add-platform x86_64-linux
 - bundle lock --add-platform ruby
