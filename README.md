@@ -18,8 +18,9 @@ https://lloyd-pest-control.herokuapp.com/
 
 - rails db:system:change --to=postgresql
 - bundle
-
-
+- deploy again
+- rails db:create db:migrate
+- Heroku console run rails db:migrate again
 
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
