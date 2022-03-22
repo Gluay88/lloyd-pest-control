@@ -2,6 +2,9 @@
 
 ## Lloyd_Pest_Control
 ##### By: Gluay S. Wang
+
+### Please run bin/webpack-dev-server after rails s
+
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
 - cd lloyd_pest_control folder
@@ -148,3 +151,4 @@ has_many :workorders
 has_many :technicians, :through => :workorders
 ```
 ### Database ---
+- Romoved Log in link (I don't need it yet for this project)
