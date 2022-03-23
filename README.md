@@ -5,10 +5,6 @@
 
 ### Please run bin/webpack-dev-server after rails s
 
-### Problems faced
-
-### Possible future improvements
-=======
 ### Deploy Heroku
 https://lloyd-pest-control.herokuapp.com/
 
