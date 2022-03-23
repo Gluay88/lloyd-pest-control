@@ -5,6 +5,10 @@
 
 ### Please run bin/webpack-dev-server after rails s
 
+### Problems faced
+
+### Possible future improvements
+=======
 ### Deploy Heroku
 https://lloyd-pest-control.herokuapp.com/
 
@@ -21,6 +25,7 @@ https://lloyd-pest-control.herokuapp.com/
 - deploy again
 - rails db:create db:migrate
 - Heroku console run rails db:migrate again
+
 
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T
