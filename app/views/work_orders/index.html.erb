@@ -33,6 +33,12 @@
   <%= link_to 'New Work Order', new_work_order_path %>
 </div>
 <br>
+<div class="download-container">
+  <h4>Download Work_Orders</h4>
+  <button>
+    <%= link_to "Download File", work_orders_path(format: "csv") %>
+  </button>
+</div>
 
 <div class="upload-container">
   <h4>Import Work_Orders</h4>
@@ -42,9 +48,4 @@
   <% end %>
 </div>
 
-<div class="download-container">
-  <h4>Download Work_Orders</h4>
-  <button>
-    <%= link_to "Download File", work_orders_path(format: "csv") %>
-  </button>
-</div>
+
