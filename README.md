@@ -8,6 +8,24 @@
 ### Problems faced
 
 ### Possible future improvements
+=======
+### Deploy Heroku
+https://lloyd-pest-control.herokuapp.com/
+
+(I've run these commands twice)
+- bundle lock --add-platform x86_64-linux
+- bundle lock --add-platform ruby
+- git status
+- git add .
+- git commit -m "add ruby and linux to Gemfile"
+- git push origin main
+
+- rails db:system:change --to=postgresql
+- bundle
+- deploy again
+- rails db:create db:migrate
+- Heroku console run rails db:migrate again
+
 
 ### set up the project
 - rails new lloyd_pest_control -d postgresql -T

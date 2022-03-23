@@ -41,11 +41,20 @@
 </div>
 
 <div class="upload-container">
-  <h4>Import Work_Orders</h4>
+  <h4>Import Work_Orders (csv)</h4>
   <%= form_tag import_work_orders_path, multipart: true do %>
     <%= file_field_tag :file %>
     <%= submit_tag "Upload File" %>
   <% end %>
 </div>
 
+
+
+=======
+<div class="download-container">
+  <h4>Download Work_Orders (csv)</h4>
+  <button>
+    <%= link_to "Download File", work_orders_path(format: "csv") %>
+  </button>
+</div>
 
