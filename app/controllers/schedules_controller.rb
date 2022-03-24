@@ -4,6 +4,10 @@ class SchedulesController < ApplicationController
   # GET /schedules or /schedules.json
   def index
     @schedules = Schedule.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @schedules.to_csv }
+    end
   end
 
   # GET /schedules/1 or /schedules/1.json
