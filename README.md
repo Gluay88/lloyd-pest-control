@@ -227,3 +227,7 @@ break_time = (second_time - end_time).seconds.in_minutes
 rails generate rspec:install
 gem install rspec
 ```
+``` ruby
+require 'rspec'
+require_relative 'car' 
+```
