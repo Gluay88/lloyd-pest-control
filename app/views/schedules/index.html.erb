@@ -35,18 +35,12 @@
   <%= link_to 'New Schedule', new_schedule_path %>
 </div>    
 <br>
-<div class="download-container">
-  <h4>Download Schdules</h4>
+<div class="download-container_schedule">
+  <h4>Download Schdules (csv)</h4>
   <button>
     <%= link_to "Download File", schedules_path(format: "csv") %>
   </button>
 </div>
 
-<div class="upload-container">
-  <h4>Import Schedules (csv)</h4>
-  <%= form_tag import_schedules_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Upload File" %>
-  <% end %>
-</div>
+
 

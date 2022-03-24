@@ -219,5 +219,6 @@ break_time = (second_time - end_time).seconds.in_minutes
 
 <input type="button" value="submit" onclick=<%= "alert('180')" %>>
 ```
-#### Schedule Model
-rails g scaffold Schedule technician_name:string location_name:string time:datetime duration:integer price:decimal break:integer
+### RSpec Test 
+rails generate rspec:install
+gem install rspec
