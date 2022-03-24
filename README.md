@@ -229,5 +229,5 @@ gem install rspec
 ```
 ``` ruby
 require 'rspec'
-require_relative 'car' 
+require_relative 'schedule' 
 ```
