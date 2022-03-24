@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  technician_name: MyString
+  location_name: MyString
+  time: 2022-03-23 21:40:41
+  duration: 1
+  price: 9.99
+  break: 1
+
+two:
+  technician_name: MyString
+  location_name: MyString
+  time: 2022-03-23 21:40:41
+  duration: 1
+  price: 9.99
+  break: 1

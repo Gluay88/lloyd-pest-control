@@ -5,10 +5,6 @@
 
 ### Please run bin/webpack-dev-server after rails s
 
-### Problems faced
-
-### Possible future improvements
-=======
 ### Deploy Heroku
 https://lloyd-pest-control.herokuapp.com/
 
@@ -209,4 +205,20 @@ add
 </div>
 ```
 
-### Work Order Database
+### TimeDifferent
+Gemfile
+gem 'time_difference'
+bundle install 
+
+Example
+``` ruby
+start_time = Time.parse('0010-01-19 10:00:00 UTC').to_i
+end_time = start_time + 60
+second_time = Time.parse('0010-01-19 10:00:00 UTC').to_i
+break_time = (second_time - end_time).seconds.in_minutes
+
+<input type="button" value="submit" onclick=<%= "alert('180')" %>>
+```
+### RSpec Test 
+rails generate rspec:install
+gem install rspec
