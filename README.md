@@ -220,6 +220,7 @@ break_time = (second_time - end_time).seconds.in_minutes
 <input type="button" value="submit" onclick=<%= "alert('180')" %>>
 ```
 ### RSpec Test 
+behavior-driven development (BDD)
 ``` ruby
 rails generate rspec:install
 gem install rspec
